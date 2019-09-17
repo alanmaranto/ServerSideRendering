@@ -7,16 +7,19 @@ import { createBrowserHistory } from 'history';
 import reducer from './reducers';
 import App from './routes/App';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const preloadedState = window.__PRELOADED_STATE_;
-const store = createStore(reducer, preloadedState, composeEnhancers());
-const history = createBrowserHistory();
+if (typeof window !== 'undefined') {
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const preloadedState = window.__PRELOADED_STATE__;
+  const store = createStore(reducer, preloadedState, composeEnhancers());
+  const history = createBrowserHistory();
 
-hydrate(
-  <Provider store={store}>
-    <Router history={history}>
-      <App />
-    </Router>
-  </Provider>,
-  document.getElementById('app'),
-);
+  hydrate(
+    <Provider store={store}>
+      <Router history={history}>
+        <App />
+      </Router>
+    </Provider>,
+    document.getElementById('app'),
+  );
+}
+
