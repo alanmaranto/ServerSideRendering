@@ -1,4 +1,4 @@
-const render = (html) => {
+const render = (html, preloadedState) => {
   return (`
     <!DOCTYPE html>
     <html>
