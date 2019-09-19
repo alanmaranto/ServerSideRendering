@@ -10,7 +10,7 @@ const ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT || 3000;
 
 const app = express();
-app.use(express.statics(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/public`));
 
 if (ENV === 'development') {
   console.log('Loading dev config');
