@@ -46,14 +46,14 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        // enforce: 'pre',
-        use: {
-          loader: 'eslint-loader',
-        },
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   enforce: 'pre',
+      //   use: {
+      //     loader: 'eslint-loader',
+      //   },
+      // },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
