@@ -51,7 +51,6 @@ const Login = (props) => {
               placeholder='Contraseña'
               onChange={handleInput}
             />
-            // eslint-disable-next-line react/button-has-type
             <button className='button'>Iniciar sesión</button>
             <div className='login__container--remember-me'>
               <label>

@@ -36,7 +36,7 @@ if (ENV === 'development') {
   app.use(helmet.permittedCrossDomainPolicies());
   app.disable('x-powered-by');
 }
-
+// El servidor responde a todas nuestras rutas
 app.get('*', main);
 
 app.listen(PORT, (err) => {
